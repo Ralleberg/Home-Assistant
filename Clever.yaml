@@ -9,7 +9,7 @@ sensor:
     resource: https://clever-app-prod.firebaseio.com/prod/availability/V1.json
     unit_of_measurement: stik
     value_template: >
-      {% set location = "f053c7a5-1616-ec11-b6e6-000d3addde22" %} # Denne skal ændres til det lokations ID du søger
+      {% set location = "f053c7a5-1616-ec11-b6e6-000d3addde22" %}
       {% set plugCount = namespace(value=0) %}
       {% for plug in value_json["clever"] %}
         {% if value_json["clever"][plug].locationId == location %}
